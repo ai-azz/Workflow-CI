@@ -1,0 +1,15 @@
+name: 20newsgroups-mlproject
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      test_size: {type: float, default: 0.2}
+      random_state: {type: int, default: 42}
+      max_features: {type: int, default: 5000}
+    command: >
+      python modelling.py
+      --test_size {test_size}
+      --random_state {random_state}
+      --max_features {max_features}
